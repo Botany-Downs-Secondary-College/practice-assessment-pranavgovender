@@ -1,0 +1,185 @@
+import random
+
+class Question:
+
+     def __init__(self, prompt, answer):
+
+          self.prompt = prompt
+
+          self.answer = answer
+
+random10questions=[]
+
+question_prompts = [
+
+     "What is the safest way to drive up to intersections? \n(a) Look to the right \n(b) Look to the left \n(c) Look behind you \n(d) All of the above \nAnswer: ", '\n'
+
+    
+
+     "If you have to drive at a slow speed that may hold up other vehicles, what should you do? \n(a) Drive at night when there's less traffic \n(b) Keep to the left and let others pass where possible \n(c) Nothing - drive as normal as it's other drivers' responsibility to overtake you safely \n(d) Keep as close as you can to the centre of the road \nAnswer: ", '\n'
+
+    
+
+     "Who is responsible for making a child under 14 years use a seat belt or a safety seat in a vehicle? \n(a) The child's parents \n(b) The driver of the vehicle \n(c) The owner of the vehicle \n(d) The child \nAnswer: ", '\n'
+
+    
+
+     "What is the maximum distance a load may overhang your vehicle behind the rear axle? \n(a) 4 Metres \n(b) 5 Metres \n(c) 6 Metres \n(d) 7 Metres \nAnswer: ", '\n'
+
+    
+
+     "You must NOT park on the right-hand side of the road, except when: \n(a) In the countryside \n(b) Deliviering packages \n(c) Picking up passengers \n(d) In a one way street \nAnswer: ", '\n'
+
+    
+
+     "You are driving in a 100 km/h speed area and you see an Accident sign. What speed must you slow down to? \n(a) 50km/h \n(b) 30km/h \n(c) 40km/h \n(d) 20km/h \nAnswer: ", '\n'
+
+    
+
+     "If you have a learner licence you can carry passengers if your supervisor is in the back seat?\n(a) True \n(b) False \nAnswer: ", '\n'
+
+       
+
+     "A broken yellow line painted close to the edge of the road means you may stop or park your vehicle there at any time?\n(a) True \n(b) False \nAnswer: ", '\n'
+
+       
+
+     "When you have a learner licence you do not have to have it with you when you drive if your supervisor has their licence with them?\n(a) True \n(b) False \nAnswer: ", '\n'
+
+    
+
+     "What must you do before turning left into a driveway?\n(a) Check the driveway is clear and enter \n(b) Signal for 3 seconds or more and if the driveway is clear enter \n(c) Signal only if there is a vehicle behind you and enter \n(d) Signal only if another vehicle is coming towards you and enter \nAnswer: ", '\n'
+
+       
+
+     "What is the minimum tread depth required for car tyres?\n(a) 0.5mm \n(b) 1.0mm \n(c) 1.5mm \n(d) 2.0mm \nAnswer: ", '\n'
+
+       
+
+     "What is the recommended distance you should allow when driving past a cyclist? \n(a) 0.5 metres \n(b) 1.0 metres \n(c) 1.5 metres \n(d) 2.0 metres \nAnswer: ", '\n'
+
+       
+
+     "If you can do so safely, you may pass on the left at an intersection if:\n(a) You have the headlights of your vehicle turned on \n(b) The vehicle in front is signalling a right turn \n(c) The vehicle in front is signalling a left turn \n(d) The vehicle in front is going faster than the speed limit \nAnswer: ",'\n'
+
+ 
+
+     "Can you stop on a bus stop in a private motor vehicle? \n(a) When dropping off passengers \n(b) Only if it is for less than 5 minutes \n(c) Only between midnight and 6am \n(d) No \nAnswer: ", '\n'
+
+    
+
+     "You should check that there is space for your vehicle on the other side of the crossing before going over a railway level crossing.\n(a) True \n(b) False \nAnswer: ", '\n'
+
+    
+
+     "To help you from being blinded by the headlights of an oncoming vehicle, what should you do?\n(a) Turn the headlights of your vehicle onto high beam \n(b) Look to the right-hand side of the road \n(c) Look at the centre of the road \n(d) Look to the left-hand side of the road \nAnswer: ", '\n'
+
+    
+
+     "When must you turn your vehicle headlights on? \n(a) 15 minutes after sunset until 15 minutes before sunrise \n(b) 30 minutes after sunset until 30 minutes before sunrise \n(c) 45 minutes after sunset until 45 minutes before sunrise  \n(d) 1 hour after sunset until 1 hour before sunrise \nAnswer: ", '\n'
+
+    
+
+     "What should you do if the vehicle behind you starts to pass you?\n(a)Move over to the right so that they cannot pass \n(b)Speed up so that they will not need to pass \n(c)Signal for them to stay behind you because you think they are going too fast \n(d) Move as far to the left side of the road as is safe and do not speed up \nAnswer: ", '\n'
+
+    
+
+     "If anybody is hurt in a crash, the driver must tell a police officer as soon as possible but within:\n(a) 24 hours \n(b) 36 hours \n(c) 48 hours \n(d) 60 hours \nAnswer: ", '\n'
+
+ 
+
+     "A police officer can impound your car on the spot if you are caught driving while disqualified.\n(a) True \n(b) False \nAnswer: "    
+
+]
+
+ 
+
+questions = [
+
+     Question(question_prompts[0], "d"),
+
+     Question(question_prompts[1], "b"),
+
+     Question(question_prompts[2], "b"),
+
+     Question(question_prompts[3], "a"),
+
+     Question(question_prompts[4], "d"),
+
+     Question(question_prompts[5], "d"),
+
+     Question(question_prompts[6], "b"),
+
+     Question(question_prompts[7], "b"),
+
+     Question(question_prompts[8], "b"),
+
+     Question(question_prompts[9], "b"),
+
+     Question(question_prompts[10], "c"),
+
+     Question(question_prompts[11], "c"),
+
+     Question(question_prompts[12], "b"),
+
+     Question(question_prompts[13], "d"),
+
+     Question(question_prompts[14], "a"),
+
+     Question(question_prompts[15], "d"),
+
+     Question(question_prompts[16], "b"),
+
+     Question(question_prompts[17], "d"),
+
+     Question(question_prompts[18], "a"),
+
+     Question(question_prompts[19], "a")
+
+]    
+
+ 
+
+random.shuffle(questions)
+
+def run_quiz(random10questions):
+
+     score = 0
+
+     questions[0:10] = random10questions
+
+     for question in questions:
+
+          answer = input(question.prompt)
+
+          if answer == question.answer:
+
+               score += 1
+
+               print("Correct")
+
+          else:
+
+               print("Unlucky, the correct answer is \"{}\".".format(question.answer))
+
+     print("you got", score, "out of", len(questions))
+
+     score_words = str(score)    
+
+     f = open("thing.txt", "a")
+
+     f.write(" {},".format(score_words))
+
+     f.close()
+
+        
+
+     #open and read the file after the appending:
+
+     f = open("thing.txt", "r")
+
+     print(f.read())      
+
+ 
+
+run_quiz(random10questions)
